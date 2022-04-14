@@ -36,6 +36,6 @@ class Mostrar:
         self.mensaje = mensaje 
     
     def mostrar(self): 
-        print(Mostrar.mensaje)
+        print(self.mensaje)
 mostrar_ok = Mostrar("OK")
-print(mostrar_ok.mostrar())
+mostrar_ok.mostrar()
