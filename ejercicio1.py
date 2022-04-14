@@ -58,5 +58,5 @@ class Mostrar:
 def visitante():
     mostrar_ok = "OK"
     mostrar_ko = "KO"
-    alternativa = Si(2 + 2 == 4, mostrar_ok, mostrar_ko)
+    alternativa = Si(input("Introduzca una igualdad/desigualdad numérica: "), mostrar_ok, mostrar_ko)
     alternativa.ejecutar()
