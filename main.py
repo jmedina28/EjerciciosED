@@ -3,7 +3,7 @@
 def seleccionejercicio(variable):
     if variable == 1:
         from ejercicio1 import visitante
-        visitante()
+        visitante(int(input("Si desea ejecutar el ejemplo del enunciado pulse 1, en cambio si desea probar el bucle de la clase MientrasQue pulse 2: ")))
     elif variable == 2:
         from ejercicio2 import Cliente
         Cliente()

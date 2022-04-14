@@ -41,9 +41,10 @@ class MientrasQue:
         self.bloque = bloque
 
     def bucle(self):
-        while self.condicionn <= 10:
+        variable1 = 1
+        while variable1 <= self.condicion:
             Mostrar(self.bloque).mostrar()
-            self.condicionn += 1
+            variable1 += 1
 
 
 class Mostrar:
@@ -55,8 +56,19 @@ class Mostrar:
     def mostrar(self):
         print(self.mensaje)
 
-def visitante():
-    mostrar_ok = "OK"
-    mostrar_ko = "KO"
-    alternativa = Si(input("Introduzca una igualdad/desigualdad numérica: "), mostrar_ok, mostrar_ko)
-    alternativa.ejecutar()
+
+def visitante(variable_visitante):
+
+    if variable_visitante == 1:
+        mostrar_ok = "OK"
+        mostrar_ko = "KO"
+        alternativa = Si(2+2 == 4, mostrar_ok, mostrar_ko)
+        alternativa.ejecutar()
+    elif variable_visitante == 2:
+        alternativa = MientrasQue(int(input("Introduzca cuántas veces desea que se repita el bucle: ")), input(
+            "Introduzca el texto que desea ejecutar en bucle:"))
+        alternativa.bucle()
+    else:
+        print("Introduzca valores correctos por favor.")
+        visitante(input(
+            "Si desea ejecutar el ejemplo del enunciado pulse 1, en cambio si desea probar el bucle de la clase MientrasQue pulse 2: "))
