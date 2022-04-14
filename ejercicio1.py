@@ -55,8 +55,8 @@ class Mostrar:
     def mostrar(self):
         print(self.mensaje)
 
-
-mostrar_ok = "OK"
-mostrar_ko = "KO"
-alternativa = Si(2 + 2 == 5, mostrar_ok, mostrar_ko)
-alternativa.ejecutar()
+def visitante():
+    mostrar_ok = "OK"
+    mostrar_ko = "KO"
+    alternativa = Si(2 + 2 == 4, mostrar_ok, mostrar_ko)
+    alternativa.ejecutar()
