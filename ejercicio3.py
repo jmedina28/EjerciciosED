@@ -10,29 +10,34 @@ precio_neto = FactoryFactura.crear(producto).facturar()
 print(precio_neto) 
 # 120 
 """
-class Naturaleza():
-    def __init__(self, naturaleza):
-        self.naturaleza = naturaleza
-    def ALIMENTARIA(self):
-        self.naturaleza = "ALIMENTARIA"
-    def SERVICIO(self):
-        self.naturaleza = "SERVICIO"
-class Producto(Naturaleza):
-    def __init__(self, naturaleza):
-        self.naturaleza = Naturaleza(naturaleza)
-        self.precio_bruto = 100
 
 
-class FactoryFactura():
-    def crear():
-        producto = Producto(input("Introduzca la naturaleza del producto: "))
-    
-    def facturar():
-        if producto.naturaleza == "ALIMENTARIA":
-            precio_neto = producto.precio_bruto * 1.055
-        elif producto.naturaleza == "SERVICIO":
-            precio_neto = producto.precio_bruto * 1.2
+class Naturaleza:
+   ALIMENTARIA = 0.055
+   SERVICIO = 0.2
+
+
+class FactoryFactura:
+   class crear():
+       def __init__(self, tipo_producto):
+           self.tipo_producto = tipo_producto
+
+       def facturar(self):
+           if self.tipo_producto == 0.2 or 0.05:
+               self.precio = 100
+               return self.precio+(self.precio*self.tipo_producto)
+           else:
+               print("Solo se pueden facturar servicios o productos alimentarios.")
+
+
+def Producto(IVA):
+   return IVA
+
+
+producto = Producto(Naturaleza.ALIMENTARIA)
+precio_neto = FactoryFactura.crear(producto).facturar()
+print(precio_neto)
+
 producto = Producto(Naturaleza.SERVICIO)
-precio_neto = FactoryFactura.crear().facturar() 
-print(precio_neto) 
-    
+precio_neto = FactoryFactura.crear(producto).facturar()
+print(precio_neto)
