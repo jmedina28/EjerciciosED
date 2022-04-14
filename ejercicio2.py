@@ -1,10 +1,10 @@
 class Modelo():
-    def __init__(self):
-        self.texto = "Hola, me llamo Juan Antonio y necesito que me devuelvas este texto en mayúsculas."
+    def __init__(self, texto):
+        self.texto = texto
     
 class Vista():
     def __init__(self):
-        self.modelo = Modelo()
+        self.modelo = Modelo(input("Introduce un texto: "))
     
     def mayusculas(self):
         print(self.modelo.texto.upper())
