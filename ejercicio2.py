@@ -1,3 +1,6 @@
+import os
+import time
+
 class Modelo():
     def __init__(self, texto):
         self.texto = texto
@@ -7,8 +10,11 @@ class Vista():
         self.modelo = Modelo(input("Introduce un texto: "))
     
     def mayusculas(self):
-        print(self.modelo.texto.upper())
-        
+        fichero = open("Mayus.txt", "a")
+        fichero.write(self.modelo.texto.upper())
+        fichero.close()
+        time.sleep(20)
+        os.remove("Mayus.txt")
 class Controlador():
     def __init__(self):
         self.vista = Vista()
