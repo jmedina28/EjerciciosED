@@ -8,3 +8,10 @@ class Vista():
     
     def imprimir(self):
         print(self.modelo.texto)
+        
+class Controlador():
+    def __init__(self):
+        self.vista = Vista()
+    
+    def imprimir(self):
+        self.vista.imprimir()
